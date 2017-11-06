@@ -1,0 +1,378 @@
+// Variables
+@import "scss/mixin";
+@import "scss/placeholder";
+@import "scss/variable";
+
+
+html,body{
+    @extend %no-margin;
+    width: $full-width; height: $full-height;
+}
+
+@include font-face($font-family);
+
+body{font-family: $font-family; color: $font-color;}
+
+#header{
+    width: $full-width;
+    height: 120px;}
+
+#header-inside{
+    width: 940px; 
+    height: $full-height;
+    @extend %auto-margin;
+    position: relative;
+}
+
+#logo{
+    float: right;
+    img{
+        margin-top: 0; 
+        float: right;
+    }
+}
+
+#logo-text{
+    h3{
+        float: right;
+        margin-top: 45px; 
+        font-size: 16px;
+        text-align: right;
+        font-family:$font-family; 
+        font-weight: 400;
+    }
+}
+
+.search {
+    float: left;
+    margin: 50px 0 0 70px;
+    #language{
+        ul{
+            list-style: none;
+            display: none;
+        }
+    }
+}
+
+a{
+    color: $font-color;
+    text-decoration: none; 
+    transition: opacity 0.25s;
+}
+
+.nav-bar{
+    width : $full-width; 
+    height:49px;
+    background-color: #eee;
+}
+
+.nav-bar-inside{
+    width: 940px;
+    height: $full-height; 
+    @extend %auto-margin;
+}
+
+.menu{
+    li{
+        display: inline;
+        float:right;
+    }
+    a{
+        height: $full-height;
+        padding: 12.5px;
+        float: right;
+        font-weight: 400;
+        font-size: 14px;
+        &:hover{
+            background-color: $accent-color;
+            color: $primary-color;
+        }
+    }
+    list-style: none;
+    float: right;
+    @extend %no-margin;
+    height: $full-height;
+}
+ 
+
+.left-menu{
+    li{
+        display: inline;
+    }
+    list-style: none;
+    float: left;
+    margin: 0 auto;
+}
+
+.register{
+	height: 30px;
+	width:100px;
+	display:block;
+	background-color: $accent-color;
+	padding: 10px 10px;
+	color: $primary-color;
+    &:hover{
+        opacity: 0.7;
+    }
+    a{
+        color: $primary-color
+    }
+}
+
+
+.slide{
+    width : $full-width;
+    height: 480px; 
+    background-image: url(../img/slide.jpg); 
+		background-clip:cover; 
+    background-position: center; 
+    position: relative
+}
+
+.content{
+    width : $full-width; 
+    height: 160px;
+}
+
+.content-inside{
+    width: 900px;
+    height: $full-height; 
+    @extend %auto-margin; 
+    direction: rtl;
+    h4{
+        font-weight: bold;
+        margin-top: 50px;
+    }
+}
+
+.feature{
+    width : 921px;
+    height: 800px;
+    @extend %auto-margin;
+    a{
+        font-size: 42px;
+    }
+    .box{
+        p{
+            text-align: center;
+            margin-top: 13px;
+            font-size: 16px;
+            font-weight: 500;
+        }
+    }
+}
+
+.box{
+    @include box-style;
+}
+
+
+a.box:hover {
+    border-color: $accent-color;
+   & .descrip{
+    display: block;
+    span{
+        display: inline-block;
+        width: 200px; 
+        color:#e7e3e3;
+        margin-top: 74px;
+        font-size: 12px;
+        }
+    }
+}
+
+.descrip{
+    width : $full-width; 
+    height: 170px; 
+    position: absolute; 
+    left: 0; 
+    top: 0;
+    text-align: center; 
+    display: none;
+    background-color: rgba(0,0,0,0.5);
+}
+
+@each $i in $list {
+    .bg#{$i} {
+        background-image: url('../img/bg#{$i}.jpg');
+        height: 170px;
+    }
+}
+
+
+.fatfooter{
+    width : $full-width; 
+    height: 350px; 
+    background-color: #eee; 
+    color: #444; 
+    float: right;
+    h4{
+        font-size: 15px;
+        margin: 1px 0 25px;
+        border-bottom: 1px solid #dbdbdb;
+    }
+}
+
+.fatfooter-inside{
+    width: 940px; 
+    height: $full-height; 
+    @extend %auto-margin;
+    padding: 30px 0;
+    direction: rtl;
+    display: block; 
+    padding: 30px
+    p{
+        font-size: 12px;
+        font-weight: lighter;
+        }
+    h4{
+        font-size: 15px; 
+        margin: 1px 0 25px; 
+        border-bottom: 1px solid #dbdbdb;
+        }
+}
+
+
+.ftbox{
+    width: 270px; 
+    float: left;
+    padding: 0; 
+    margin: 10px 21px 0;
+    direction: rtl; 
+    float: right;
+    ul{
+        list-style: none; 
+        @extend %no-margin;
+    }
+    a{
+        font-size: 14px;
+        text-align: left; 
+        font-weight: 200; 
+        float: none;
+        &:hover{
+            color: $accent-color;
+        }
+    }
+    p{
+        font-size: 14px;
+        font-weight: lighter;
+    }
+    label{
+        font-weight: 200; 
+        font-size: 13px;
+    }
+}
+
+
+.contactus-inside{
+    width: 270px; 
+    height: 200px;
+    .phone{
+        p{
+            float: left;
+        }
+    }
+    .socialmedia{
+        width: 270px;
+        a{
+            margin-right: 118px;
+        }
+
+    }
+}
+
+.phone{
+    width: 270px;
+    height: 150px;
+}
+
+
+.fa{
+    float: right;
+}
+
+.phone-number{
+    p{
+    font-size: 13px;
+    margin: 0; 
+    padding: 0;
+    line-height: 27px; 
+    text-align: left;
+    }
+    width: 100px; 
+    display: block;
+    margin: 0 150px; 
+    padding: 0; 
+    display: block;
+}
+
+.phone-label{
+    width: 50px; 
+    margin-right: 10px; 
+    float: right; 
+    margin-top: 0;
+}
+ 
+
+.fb-text{
+    margin-right: 32px;
+    width:60px;
+}
+
+.footer{
+    width : $full-width;
+    height: 65px;
+    background-color: #ddd; 
+    float: right;
+    .ex-links{
+        float: right;
+        li{
+            &:before{
+                content: ".";margin-right: 9px;color: $font-color;
+            }
+        }
+    }
+}
+
+.footer-inside{
+    width: 940px; 
+    height: $full-height; 
+    @extend %auto-margin;
+}
+
+.ex-links{
+    ul{
+        list-style: none;
+        float: right;
+        @extend %auto-margin;
+        padding-top: 16px;
+    }
+    li{
+        display: inline; 
+        float: right; 
+        font-size: 14px;
+        margin:8px;
+        padding: 0;
+    }
+    a{
+        &:hover{
+           color: $accent-color; 
+        }
+    }
+}
+
+
+.copyright{
+    width: 440px;
+    margin-top: 24px;
+    float: left;
+    p{
+        font-size: 13px; 
+        margin-top: 0px;
+    }
+    a{
+        &:hover{
+            color: $accent-color;
+        }
+    }
+ }

@@ -1,0 +1,62 @@
+$full-width : 100%;
+$full-height : 100%;
+$font-family : 'IRANSans-web';
+$font-color : #333;
+$accent-color : #25a446;
+$primary-color : #fff;
+$list : 1 2 3 4 5 6 7 8 9;
+
+
+
+%no-margin{
+    margin: 0;
+    padding: 0;
+}
+
+%auto-margin{
+    margin: 0 auto;
+}
+
+
+
+@mixin box-style($width: 282px, $height: 220px, $backgroundColor: $primary-color){
+      width: $width;
+      height: $height;
+      float: right;
+      margin: 11.5px;
+      display: inline-block;
+      background-color: $backgroundColor;
+      background-size: cover;
+      cursor: pointer;
+      position: relative;
+      border: 1px solid #f0f0f0;
+}
+
+
+@mixin font-face($font-family, $file-path: '../fonts/IRANSans-web.woff2', $font-weight: normal, $font-style: normal) {
+  @font-face {
+    font-family: $font-family;
+      src: url('../fonts/IRANSans-web.woff2');
+      font-weight : normal;
+    }
+    @font-face{
+        font-family: $font-family;
+        src: url('../fonts/IRANSans-Medium-web.woff2');
+        font-weight : 500;
+    }
+    @font-face{
+        font-family: $font-family;
+        src: url('../fonts/IRANSans-Light-web.woff2');
+        font-weight : 300;
+    }
+    @font-face{
+        font-family: $font-family;
+        src: url('../fonts/IRANSans-Ultralight-web.woff2');
+        font-weight : 200;
+    }
+    @font-face{
+        font-family: $font-family;
+        src: url('../fonts/IRANSans-bold-web.woff2');
+        font-weight : bold;
+    }
+}
